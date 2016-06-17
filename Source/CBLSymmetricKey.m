@@ -43,7 +43,7 @@
 
 - (instancetype) init {
     NSMutableData* keyData = [NSMutableData dataWithLength: kKeySize];
-    SecRandomCopyBytes(kSecRandomDefault, keyData.length, keyData.mutableBytes);
+//    SecRandomCopyBytes(kSecRandomDefault, keyData.length, keyData.mutableBytes);
     return [self initWithKeyData: keyData];
 }
 
@@ -143,7 +143,7 @@ typedef struct {
 
 - (CBLCryptorBlock) createEncryptor {
     Header header;
-    SecRandomCopyBytes(kSecRandomDefault, kIVSize, header.iv);
+//    SecRandomCopyBytes(kSecRandomDefault, kIVSize, header.iv);
 
     CCCryptorRef cryptor;
     CCCryptorStatus status = CCCryptorCreate(kCCEncrypt, kAlgorithm, kCCOptionPKCS7Padding, _keyData.bytes, _keyData.length,

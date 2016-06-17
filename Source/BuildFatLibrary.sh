@@ -48,9 +48,9 @@ SDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\{3\}$')
 
 if [ ${PLATFORM_NAME} = "iphonesimulator" ]
 then
-OTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}
+OTHER_SDK_TO_BUILD=iphoneos10.0
 else
-OTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}
+OTHER_SDK_TO_BUILD=iphonesimulator10.0
 fi
 
 echo "XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})"
